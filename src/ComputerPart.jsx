@@ -1,7 +1,10 @@
 import PartList from "./partList.jsx"
+import React, { useState, useRef } from "react";
 
 //Specific part that will house other data
 function ComputerPart(props){
+    const [name = "balls", useName] = useState();
+    const expandableRef = useRef(null);
 
     const {partname ="pcpart",partList=[{
         id:0,
@@ -11,15 +14,19 @@ function ComputerPart(props){
         estimated_watts:0
     }]} = props
 
+    const handleClick = () => {
+        if (expandableRef.current) {
+          expandableRef.current.style.display = expandableRef.current.style.display === "none" ? "block" : "none";
+        }
+    };
+
     return (
         <div className = "pcpart" id={partname}>
-            <div className = "category">
+            <div className = "category" onClick={handleClick}>
                 <h3 className = "categoryname">{partname}</h3>
             </div>
-            <div className = "partsChoices">
-                <table>
-                    <PartList itemList={partList}/>
-                </table>
+            <div ref={expandableRef} className = "partsChoices" style={{ display: "none" }}>
+                <PartList itemList={partList}/>
             </div>
         </div>
     );

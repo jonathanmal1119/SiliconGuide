@@ -1,13 +1,16 @@
 import ComputerPart from './ComputerPart'
+import Header from './Header'
 import './App.css'
+import test from "./Assistant"
 
 function App() {
 
   return (
     <>
+      <Header/>
       <div className="container">
         <div className="allparts">
-          <ComputerPart partname="CPU"/>
+          <ComputerPart partname="CPU" partList={test()}/>
           
           <ComputerPart partname="Motherboard" partList={[
             {
