@@ -9,7 +9,7 @@ function test(){
             estimated_watts:105   
         },
         {
-            id:0,
+            id:1,
             name:"Chat2",
             price:0,
             link:"",

@@ -3,25 +3,6 @@ h3 {
     margin: 0;
 }
 
-/* Style */
-table, .singleItem{
-    padding:10px;
-    border: black solid 1px;
-    border-collapse: collapse;
-}
-
-table {
-    width:100%;
-}
-
-#itemName{
-    text-align: left;
-}
-
-#link,#watt,#price{
-    text-align: center;
-}
-
 body, #root {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -43,11 +24,39 @@ body, #root {
     align-items: center;
 }
 
-.container{
+/* Left Div */
+.prevListContainer{
+    display: block;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Right Div */
+.summaryContainer{
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 80px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* Center Div */
+.currentPartsContainer{
+    display: inline-block;
     max-width: 2000px;
+    min-width: 500px;
     background-color: white;
     border: 1px solid #ccc;
     padding: 20px;
@@ -62,9 +71,6 @@ body, #root {
     width:300px;
 }
 
-.partsChoices {
-    display: none;
-}
 
 
 .main-header {

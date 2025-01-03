@@ -8,7 +8,11 @@ function App() {
   return (
     <>
       <Header/>
-      <div className="container">
+      <div className="prevListContainer">
+        
+      </div>
+      <div className="currentPartsContainer">
+
         <div className="allparts">
           <ComputerPart partname="CPU" partList={test()}/>
           
@@ -85,16 +89,13 @@ function App() {
               estimated_watts:1502
             }
           ]}/>
+        </div>
       </div>
 
-        <div id="inputcon">
-            <div>
-                <p>
-                  Hello
-                </p>
-            </div>
-        </div>
-        
+      <div className="summaryContainer">
+        <ul>
+          
+        </ul>
       </div>
     </>
   )
