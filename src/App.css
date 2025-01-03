@@ -1,0 +1,52 @@
+table, .singleItem{
+padding:10px;
+border: black solid 1px;
+border-collapse: collapse;
+}
+table {
+    width:100%;
+}
+#itemName{
+text-align: left;
+
+}
+
+#link,#watt,#price{
+    text-align: center;
+}
+.allparts{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+padding:15px;
+background-color: rgba(83, 194, 194, 0.76);
+}
+.pcpart{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(212, 235, 235, 0.76);
+    text-align: left;
+    width:100%;
+}
+body{
+    display: flex;
+    margin:0;
+    justify-content: center;
+}
+.partname{
+    margin: 0px;
+    padding: 15px 5px 15px 5px;
+    background-color: rgba(129, 141, 137, 0.719);
+    
+}
+.container{
+display: flex;
+    width:1000px;
+background-color: rgb(248, 0, 0);
+
+}
+#inputcon{
+
+background-color: gray;
+width:300px;
+}
