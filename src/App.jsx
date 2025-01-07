@@ -2,14 +2,27 @@ import ComputerPart from './ComputerPart'
 import Header from './Header'
 import './App.css'
 import test from "./Assistant"
+import React,{useEffect, useState} from 'react'
 
 function App() {
+  const [data ="none",setData]= useState([]);
 
+  useEffect(()=>{
+    fetch(import.meta.env.VITE_CON)
+    .then(res=>res.json())
+    .then(data => setData(data))//Need to add check that if data is received but undefined to default
+    .catch(err => console.log(err));
+  },[]);
+  
   return (
     <>
       <Header/>
       <div className="prevListContainer">
-        
+
+        {data.map((datas)=>{
+            return(<p key={datas.data}>{datas.data}</p>);
+        })}
+
       </div>
       <div className="currentPartsContainer">
 
