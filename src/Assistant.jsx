@@ -1,3 +1,9 @@
+// require('dotenv').config({path:'../.env'})
+
+// Get API KEY
+// import.meta.env.VITE_OPENAI_API_KEY
+
+
 function test(){
     
     return [

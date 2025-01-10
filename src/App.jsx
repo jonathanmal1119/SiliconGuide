@@ -1,5 +1,6 @@
 import ComputerPart from './ComputerPart'
 import Header from './Header'
+import Footer from './Footer'
 import './App.css'
 import test from "./Assistant"
 
@@ -97,6 +98,8 @@ function App() {
           
         </ul>
       </div>
+       
+      <Footer/>
     </>
   )
 }

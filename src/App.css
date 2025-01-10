@@ -157,7 +157,17 @@ button {
     background-color: #d4d4d4; /* Darker color on hover */
 }
 
+/* Footer */
 
+.footer {
+    background-color: #282c34; /* Example color */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed; /* Makes it stick to the bottom */
+    bottom: 0;
+    width: 100%;
+  }
 
 /* Extra 
 
