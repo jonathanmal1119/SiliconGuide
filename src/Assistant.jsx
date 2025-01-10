@@ -1,27 +1,41 @@
-// require('dotenv').config({path:'../.env'})
+function ParseResponse(response_json) {
+    if (!response_json) {
+        console.error("Error (ParseResponse): JSON is not valid.");
+        return;
+    }
 
-// Get API KEY
-// import.meta.env.VITE_OPENAI_API_KEY
+    // Check if 'responses' exists and is an array
+    if (!response_json.responses || !Array.isArray(response_json.responses)) {
+        console.error("Error (ParseResponse): 'responses' is missing or not an array.");
+        return;
+    }
 
+    // Iterate over and process only the 'assistant' responses
+    response_json.responses.forEach((resp) => {
+        if (resp.startsWith("assistant >")) {
+            const jsonString = resp.replace("assistant >", "").trim();
 
-function test(){
-    
-    return [
-        {
-            id:0,
-            name:"Ryzen 9 7900x",
-            price:100,
-            link:"https://www.youtube.com/",
-            estimated_watts:105   
-        },
-        {
-            id:1,
-            name:"Chat2",
-            price:0,
-            link:"",
-            estimated_watts:0   
-        },
-    ];
+            try {
+                // Parse the JSON string
+                const parsedData = JSON.parse(jsonString);
+
+                // If it contains 'parts', log each part
+                if (parsedData.parts && Array.isArray(parsedData.parts)) {
+                    parsedData.parts.forEach((part, partIndex) => {
+                        console.log(`Part ${partIndex + 1}:`);
+                        console.log(`  Name: ${part.name}`);
+                        console.log(`  Price: $${part.price}`);
+                        console.log(`  Link: ${part.link}`);
+                        console.log(`  Estimated Wattage: ${part.estimated_wattage}W`);
+                    });
+                } else {
+                    console.error("Error (ParseResponse): No 'parts' found in assistant response.");
+                }
+            } catch (error) {
+                console.error("Error parsing JSON in assistant response:", error);
+            }
+        }
+    });
 }
 
-export default test
+export default ParseResponse;

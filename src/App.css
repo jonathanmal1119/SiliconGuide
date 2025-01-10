@@ -3,14 +3,47 @@ h3 {
     margin: 0;
 }
 
-body, #root {
+body {
+    margin: 0;
+}
+
+#root {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    flex-direction: column; /* Arrange children vertically */
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.main {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: Row;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+/* body, #root {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-}
+} */
 
 .categoryname{
     background-color: #e0e0e0;
@@ -70,8 +103,6 @@ body, #root {
     background-color: gray;
     width:300px;
 }
-
-
 
 .main-header {
     display: flex;
@@ -163,96 +194,67 @@ button {
     background-color: #282c34; /* Example color */
     color: white;
     text-align: center;
-    padding: 1rem 0;
     position: fixed; /* Makes it stick to the bottom */
     bottom: 0;
     width: 100%;
   }
 
-/* Extra 
 
-.main-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
-    width: 80%;
-    max-width: 1200px;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 8px;
-    margin: auto;
-    margin-top: 80px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
 
-.parts-list .row {
-    background-color: #e0e0e0;
-    padding: 10px;
-    border-radius: 1.5px;
-    border: 1px solid #ccc;
-    height: 65px;
-    margin-bottom: 2.5px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-}
-
-.row:hover {
-    background-color: #d4d4d4;
-}
-
-.row-input {
-    width: 60px;
-    padding: 5px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: center;
-    margin-left: auto;
-}
 
 .chat-box {
-    background-color: #e0e0e0;
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    position: fixed; /* Stays in place even when scrolling */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+    width: 300px; /* Set the width of the chat box */
+    max-height: 400px; /* Optional: Limit the height of the chat box */
+    background-color: #ffffff; /* Background color for the chat box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for better appearance */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    z-index: 1000; /* Ensure it appears above other elements */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
 }
 
-.expandable-content {
-    display: none;
-    padding: 5px;
-    background-color: #f9f9f9;
+.chat-header {
+    background-color: #007bff; /* Chat header background color */
+    color: white; /* Chat header text color */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer; /* Makes it clickable for toggle behavior */
 }
 
-.placeholder {
+.chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-input {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    animation: pulse 1.5s infinite;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
 }
 
-.placeholder p {
-    margin: 0;
-    font-size: 1rem;
-    color: #666;
+.chat-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
-@keyframes pulse {
-    0% {
-        background-color: #e0e0e0;
-    }
-    50% {
-        background-color: #cccccc;
-    }
-    100% {
-        background-color: #e0e0e0;
-    }
-} */
+.chat-input button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
