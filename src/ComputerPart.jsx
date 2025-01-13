@@ -3,10 +3,10 @@ import React, { useState, useRef } from "react";
 
 //Specific part that will house other data
 function ComputerPart(props){
-    const [name = "balls", useName] = useState();
+    const [name = "default", useName] = useState(); // CHANGE PLEASE
     const expandableRef = useRef(null);
 
-    const {partname ="pcpart",partList=[{
+    const {updateCategory,partname ="pcpart",partList=[{
         id:0,
         name:"Nothing",
         price:0,
@@ -18,6 +18,7 @@ function ComputerPart(props){
         if (expandableRef.current) {
           expandableRef.current.style.display = expandableRef.current.style.display === "none" ? "block" : "none";
         }
+        updateCategory(partname);
     };
 
     return (

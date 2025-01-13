@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import ParseResponse from "./Assistant"
 
-const ChatBox = () => {
-  const [messages, setMessages] = useState([]);
+const ChatBox = ({responseFunc}) => {
+  // const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
   const handleSend = async () => {
@@ -20,38 +20,19 @@ const ChatBox = () => {
 
         const data = await response.json();
 
-        // Check if there was an error
         if (response.ok) {
-            // Display the responses from OpenAI
-            // if (data.responses && data.responses.length > 0) {
-            //     responseContainer.innerHTML = `<ul>${data.responses
-            //         .map((resp) => `<li>${resp}</li>`)
-            //         .join("")}</ul>`;
-            // } else {
-            //     responseContainer.textContent = "No response received.";
-            // }
-            ParseResponse(data);
-            
+            responseFunc(data);
         } 
     } catch (error) {
         console.error("Error:", error);
     }
 
-    setInput(""); // Clear the input field
+    setInput("");
   };
 
   return (
     <div className="chat-box">
       <div className="chat-header">Chat</div>
-      <div className="chat-body">
-        {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`message ${message.sender === "user" ? "user" : "bot"}`}>
-            {message.text}
-          </div>
-        ))}
-      </div>
       <div className="chat-input">
         <input
           type="text"
