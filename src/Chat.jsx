@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import ParseResponse from "./Assistant"
 
 const ChatBox = ({responseFunc}) => {
-  // const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
   const handleSend = async () => {
     if (input.trim() === "") return;
 
     try {
-        // Send the user's query to the backend
         const response = await fetch("http://localhost:40006/ask", {
             method: "POST",
             headers: {
@@ -19,6 +17,7 @@ const ChatBox = ({responseFunc}) => {
         });
 
         const data = await response.json();
+        console.log(data);
 
         if (response.ok) {
             responseFunc(data);
