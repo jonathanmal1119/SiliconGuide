@@ -1,0 +1,50 @@
+.parts-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* .parts-table {
+  background-color: #121212;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 12px solid #2a2a2a;
+  border-radius: 10px;
+} */
+
+.parts-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #f0f0f0;
+}
+
+.parts-table th,
+.parts-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.parts-table th {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-radius: 10px;
+}
+
+.parts-table td {
+  font-size: 0.95rem;
+  
+}
+
+.add-button {
+  background: none;
+  color: #4e5eff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.add-button:hover {
+  opacity: 0.8;
+}

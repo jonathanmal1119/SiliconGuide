@@ -1,0 +1,11 @@
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+.flex {
+  display: flex;
+  justify-content: center; 
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}

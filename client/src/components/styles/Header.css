@@ -1,0 +1,28 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: white;
+}
+
+.logo-icon {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.site-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  color: white;
+}

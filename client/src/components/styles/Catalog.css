@@ -1,0 +1,33 @@
+.catalog-container {
+    flex: 3;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog-tabs-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #3c3f44;  /* ✅ fixed */
+}
+
+.catalog-header {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+    padding-left: 20px;
+}
+
+.catalog-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.catalog-partslist-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2.5rem 2rem 2.5rem;
+}
