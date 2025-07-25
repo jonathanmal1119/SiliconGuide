@@ -1,6 +1,9 @@
 .tab {
+  gap: 10px;
+  padding: 5px;
   cursor: pointer;
   color: #ffffffc2;
+  
   border-bottom: 2px solid transparent;
   transition: color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;

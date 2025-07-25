@@ -1,4 +1,4 @@
-
+import './styles/Summarybar.css';
 
 function SummaryBar() {
     return (

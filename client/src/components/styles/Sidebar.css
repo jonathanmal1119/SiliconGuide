@@ -1,0 +1,16 @@
+.sidebar-container {
+  background-color: #1a1e24;
+  width: 210px;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-right: 1px solid #2c2f36;
+  text-align: center;
+  
+}
+
+.sidebar-container h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}

@@ -1,21 +1,24 @@
 .catalog-container {
     flex: 3;
-    padding: 2rem;
+    padding: 32px;
     display: flex;
     flex-direction: column;
+    background-color: #111418;
+    font-family: 'Segoe UI', sans-serif;
+
+
 }
 
 .catalog-tabs-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid #3c3f44;  /* ✅ fixed */
+  border-bottom: 1px solid #3c3f44;  
 }
 
 .catalog-header {
     font-size: 28px;
     font-weight: bold;
-    font-family: 'Segoe UI', sans-serif;
     padding-left: 20px;
 }
 

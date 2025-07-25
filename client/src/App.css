@@ -1,11 +1,18 @@
 html, body, #root {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
+  
 }
 .flex {
   display: flex;
   justify-content: center; 
   height: 100%;
   width: 100%;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+
 }

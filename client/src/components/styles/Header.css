@@ -4,19 +4,23 @@
   width: 100%;
   z-index: 1000;
   border-bottom: 1px solid #333;
+  background-color: #1a1e24;
+
 }
 
 .header-left {
   display: flex;
-  align-items: center;
-  gap: 16px;
   color: white;
+  justify-content: flex-start;
+
 }
 
 .logo-icon {
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   color: white;
+  margin: 16px 10px 15px 15px;
+
 }
 
 .site-title {
@@ -25,4 +29,5 @@
   line-height: 1.25;
   letter-spacing: -0.015em;
   color: white;
+  margin-top: 14px;
 }
