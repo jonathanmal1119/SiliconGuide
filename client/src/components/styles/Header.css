@@ -5,7 +5,6 @@
   z-index: 1000;
   border-bottom: 1px solid #333;
   background-color: #1a1e24;
-
 }
 
 .header-left {
@@ -16,17 +15,16 @@
 }
 
 .logo-icon {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   color: white;
-  margin: 16px 10px 15px 15px;
-
+  margin: 23px 10px 15px 15px;
 }
 
 .site-title {
   font-size: 1.125rem;
   font-weight: bold;
-  line-height: 1.25;
+  line-height: 2.25;
   letter-spacing: -0.015em;
   color: white;
   margin-top: 14px;

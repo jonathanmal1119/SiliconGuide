@@ -19,6 +19,7 @@ function PartsList() {
                         <col style={{ width: "10%" }} />
                         <col style={{ width: "5%" }} />
                         <col style={{ width: "5%" }} />
+                        <col style={{ width: "5%" }} />
                     </colgroup>
                     <thead>
                     <tr>
@@ -36,7 +37,7 @@ function PartsList() {
                             <td>{part.ratings.toFixed(1)}</td>
                             <td>${part.price.toFixed(2)}</td>
                             <td>{part.wattage}W</td>
-                            <td><button className="add-button">Add Part</button></td>
+                            <td><div className="plus-button">+</div></td>
                             </tr>
                         ))}
                     </tbody>

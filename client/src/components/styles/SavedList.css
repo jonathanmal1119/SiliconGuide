@@ -1,0 +1,74 @@
+.sidebar {
+  background-color: #1e1e1e;
+  padding: 4px;
+  width: 250px;
+}
+
+.saved-section-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: monospace;
+  color: #fff;
+}
+
+.saved-list {
+  /* margin-bottom: 4px; */
+  font-family: monospace;
+  font-size: 20px;
+  color: #cfcfcf;
+  align-items: center;
+}
+
+.tree-item {
+  padding-left: 12px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tree-item:hover {
+  color: #fff;
+}
+
+.tree-leaf.mid-branch::before {
+  content: "├─ ";
+  font-size: 28px;
+  color: #888;
+  margin-right: 15px;
+}
+
+.tree-item:hover .tree-leaf.mid-branch::before{
+  color: #fff;
+}
+
+.tree-leaf.mid-branch{
+    display: flex;
+    align-items: center;
+}
+
+.tree-leaf.last-branch::before {
+  content: "└─ ";
+  color: #888;
+  font-size: 30px;
+  margin-right: 15px;
+}
+
+.tree-item:hover .tree-leaf.last-branch::before{
+  color: #fff;
+}
+
+.tree-leaf.last-branch{
+    display: flex;
+    align-items: center;
+}
+
+.add-btn {
+    display: flex;
+    align-items: right;
+}
+
+.tree-spacer::before {
+  content: "│";
+  color: #888;
+  font-size: 30px;
+  margin-left: 12px;
+}
