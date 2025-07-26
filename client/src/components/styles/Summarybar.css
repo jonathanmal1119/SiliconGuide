@@ -1,17 +1,43 @@
 .summarybar-container {
-  width: 240px;
+  width: 300px;
   background-color: #111418;
   border-left: 1px solid #2c2f36;
   padding: 32px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
 }
 
+.summary-title {
+  font-family: monospace;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 30px;
+  align-self: center;
+}
 
 .summarybar-container h2{
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-family: monospace;
+  font-size: 20px;
+  color: #cfcfcf;
+  align-items: center;
 }
 
+.summary-text{
+  font-size: 18px;
+  font-family: monospace;
+}
+
+.summary-leaf.last-branch::before {
+  content: "└─ ";
+  color: #888;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.summary-leaf.last-branch{
+  font-family: monospace;
+  display: flex;
+  align-items: center;
+  color: #888;
+  font-size: 16px;
+}
