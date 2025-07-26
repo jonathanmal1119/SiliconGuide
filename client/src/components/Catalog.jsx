@@ -12,7 +12,7 @@ function Catalog({currentTab,setCurrentTab}) {
             
             <div className="catalog-body">
                 <div className='catalog-partslist-wrapper'>
-                    <PartsList/>
+                    <PartsList currentTab ={currentTab}/>
                 </div>
             </div>
         </div>
