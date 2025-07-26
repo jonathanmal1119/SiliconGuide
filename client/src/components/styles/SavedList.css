@@ -72,3 +72,11 @@
   font-size: 30px;
   margin-left: 12px;
 }
+.tree-item.selected {
+  color: #fff;
+}
+
+.tree-item.selected .tree-leaf.mid-branch::before,
+.tree-item.selected .tree-leaf.last-branch::before {
+  color: #fff;
+}
