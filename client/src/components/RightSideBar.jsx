@@ -3,7 +3,7 @@ import Chat from './Chat';
 import Tab from './Tab';
 import './styles/Tabs.css';
 
-function RightSideBar({currentRightTab, setCurrentRightTab}) {
+function RightSideBar({currentRightTab, setCurrentRightTab,selectedParts}) {
     const tabLabels = ["Chat", "Summary"];
 
     return (
@@ -16,7 +16,7 @@ function RightSideBar({currentRightTab, setCurrentRightTab}) {
                 </div>
             </div>
             {currentRightTab == 'Chat' &&  <Chat/>}
-            {currentRightTab == 'Summary' &&  <SummaryBar/>}
+            {currentRightTab == 'Summary' &&  <SummaryBar selectedParts={selectedParts}/>}
         </div>
     );
 };

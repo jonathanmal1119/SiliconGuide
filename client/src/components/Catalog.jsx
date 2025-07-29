@@ -2,7 +2,7 @@ import Tabs from './Tabs';
 import PartsList from './PartsList';
 import './styles/Catalog.css';
 
-function Catalog({currentTab,setCurrentTab}) {
+function Catalog({currentTab,setCurrentTab,onAddPart}) {
     const tabLabels = ["CPU", "Motherboard", "Memory", "Storage", "Graphics Card", "Case", "Power Supply", "CPU Cooler", "Case Fans"];  
 
     return (
@@ -14,7 +14,7 @@ function Catalog({currentTab,setCurrentTab}) {
             
             <div className="catalog-body">
                 <div className='catalog-partslist-wrapper'>
-                    <PartsList currentTab ={currentTab}/>
+                    <PartsList onAddPart = {onAddPart} currentTab ={currentTab}/>
                 </div>
             </div>
         </div>

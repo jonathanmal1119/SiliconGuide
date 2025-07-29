@@ -9,6 +9,11 @@ import RightSideBar from './components/RightSideBar';
 function App() {
   const [currentTab, setCurrentTab] = useState("CPU")
   const [currentRightTab, setCurrentRightTab] = useState("Chat")
+  const [selectedParts, setSelectedParts] = useState([]);
+
+  const handleAddPart = (category, part) => {
+    setSelectedParts(prev => [...prev, { category, part }]);
+  };
 
   return (
     <>
@@ -16,8 +21,8 @@ function App() {
       <Header />
       <div className="flex">
         <Sidebar/>
-        <Catalog setCurrentTab={setCurrentTab} currentTab={currentTab}/>
-        <RightSideBar setCurrentRightTab={setCurrentRightTab} currentRightTab={currentRightTab}/>
+        <Catalog onAddPart={handleAddPart} setCurrentTab={setCurrentTab} currentTab={currentTab}/>
+        <RightSideBar selectedParts={selectedParts} setCurrentRightTab={setCurrentRightTab} currentRightTab={currentRightTab}/>
       </div>
     </>
   )
