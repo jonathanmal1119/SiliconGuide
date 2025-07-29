@@ -1,0 +1,41 @@
+# Byte-code files
+*.pyc
+__pycache__/
+.pytest_cache/
+
+# Virtual environment
+venv/
+env/
+.env/
+.venv/
+
+# Editor/IDE specific files
+.idea/             # PyCharm
+.vscode/           # VS Code
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Database files
+*.sqlite3
+*.db
+
+# Distribution / Build files
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# Miscellaneous
+.coverage
+.tox/
+htmlcov/
