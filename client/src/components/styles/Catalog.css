@@ -1,13 +1,13 @@
 .catalog-container {
-    flex: 3;
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    background-color: #111418;
-    font-family: 'Segoe UI', sans-serif;
-
-
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #111418;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 32px;
+  min-width: 0;
 }
+
 
 .catalog-tabs-wrapper {
   display: flex;

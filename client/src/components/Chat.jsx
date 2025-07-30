@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import './styles/Chat.css';
 
-export default function Chat() {
+export default function Chat({currentRightTab}) {
   const [messages, setMessages] = useState([
     { sender: 'ai', text: 'Hi! Need help with PC parts?' },
   ]);
@@ -36,7 +36,7 @@ export default function Chat() {
   }, [messages]);
 
   return (
-    <div className="chat-container">
+    <div style={{ display: currentRightTab === 'Chat' ? 'flex' : 'none', flexDirection: 'column', flex: 1 }} className="chat-container">
       <span className="chat-header">Silicon Assistant</span>
 
       <div className="chat-messages">

@@ -2,15 +2,15 @@ import './styles/Sidebar.css';
 import SavedList from './SavedList';
 import { useState } from 'react';
 
-function Sidebar() {
-
+function Sidebar({ selectedList, setSelectedList, savedLists }) {
+/*
     const savedLists = [
     "Jon's List",
     "Richies's List",
     "Test List 2"
     ];
  const [selectedList, setSelectedList] = useState(savedLists[0]);
-
+*/
 
 
 

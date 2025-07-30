@@ -13,14 +13,13 @@ const defaultParts = {
   "Case Fans": "N/A"
 };
 
-function SummaryBar({ selectedParts = [] }) {
+function SummaryBar({ selectedParts = [], currentRightTab}) {
   // Build map safely
   const selectedMap = new Map(
     Array.isArray(selectedParts) ? selectedParts.map(({ category, part }) => [category, part.name]) : []
   );
-
   return (
-    <div className="summarybar-container">
+    <div style={{ display: currentRightTab === 'Summary' ? 'block' : 'none' }} className="summarybar-container" >
       <span className="summary-title">Parts Summary</span>
       <div className="summary-list">
         {Object.entries(defaultParts).map(([category, defaultPart]) => (

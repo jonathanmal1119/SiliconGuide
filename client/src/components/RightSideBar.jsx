@@ -15,8 +15,12 @@ function RightSideBar({currentRightTab, setCurrentRightTab,selectedParts}) {
                     ))}
                 </div>
             </div>
-            {currentRightTab == 'Chat' &&  <Chat/>}
-            {currentRightTab == 'Summary' &&  <SummaryBar selectedParts={selectedParts}/>}
+            <Chat currentRightTab={currentRightTab}/>
+            <SummaryBar currentRightTab={currentRightTab} selectedParts={selectedParts} />
+            
+
+
+
         </div>
     );
 };

@@ -41,10 +41,12 @@
 }
 
 .rightside-container {
-  width: 350px;
-  border-left: 1px solid #2c2f36;
+  flex: 0.75;
   padding-top: 20px;
-  /* padding: 32px 20px; */
   display: flex;
   flex-direction: column;
+  background-color: #111418;
+  border-left: 1px solid #2c2f36;
+  min-width: 0;
 }
+

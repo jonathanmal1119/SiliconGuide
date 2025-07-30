@@ -9,20 +9,40 @@ import RightSideBar from './components/RightSideBar';
 function App() {
   const [currentTab, setCurrentTab] = useState("CPU")
   const [currentRightTab, setCurrentRightTab] = useState("Chat")
-  const [selectedParts, setSelectedParts] = useState([]);
+  const [savedLists] = useState([
+    "Jon's List",
+    "Richies's List",
+    "Test List 2"
+  ]);
+  const [selectedList, setSelectedList] = useState(savedLists[0]);
+
+
+
+  const [plans, setPlans] = useState(() =>
+    Object.fromEntries(savedLists.map(name => [name, []]))
+  );
+
+
 
   const handleAddPart = (category, part) => {
-    setSelectedParts(prev => [...prev, { category, part }]);
-  };
+  setPlans(prev => {
+    const updatedList = [...prev[selectedList].filter(p => p.category !== category), { category, part }];
+    return {
+      ...prev,
+      [selectedList]: updatedList
+    };
+  });
+};
+
 
   return (
     <>
       <Head />
       <Header />
       <div className="flex">
-        <Sidebar/>
+        <Sidebar savedLists={savedLists} selectedList={selectedList} setSelectedList={setSelectedList} />
         <Catalog onAddPart={handleAddPart} setCurrentTab={setCurrentTab} currentTab={currentTab}/>
-        <RightSideBar selectedParts={selectedParts} setCurrentRightTab={setCurrentRightTab} currentRightTab={currentRightTab}/>
+        <RightSideBar selectedParts={plans[selectedList]} setCurrentRightTab={setCurrentRightTab} currentRightTab={currentRightTab}/>
       </div>
     </>
   )
