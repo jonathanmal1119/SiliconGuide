@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <Head />
-      <Header />
+      <Header currPlan={plans[selectedList]} />
       <div className="flex">
         <Sidebar savedLists={savedLists} selectedList={selectedList} setSelectedList={setSelectedList} />
         <Catalog onAddPart={handleAddPart} setCurrentTab={setCurrentTab} currentTab={currentTab}/>

@@ -5,24 +5,37 @@
   z-index: 1000;
   border-bottom: 1px solid #333;
   background-color: #1a1e24;
+  display: flex;               
+  justify-content: space-between; 
+  align-items: center;         
 }
 
 .header-left {
   display: flex;
   color: white;
   justify-content: flex-start;
+}
 
+.header-right {
+  background-color: #0f1114;
+  padding: 8px 20px;
+  margin-right: 40px;
+  border-radius: 10px;
+  display: flex;
+  gap: 20px;
+  color: white;
+  font-size: 14px;
 }
 
 .logo-icon {
   width: 20px;
   height: 20px;
   color: white;
-  margin: 22px 10px 15px 15px;
+  margin: 17px 17px 15px 20px;
 }
 
 .site-title {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: bold;
   line-height: 2.25;
   letter-spacing: -0.015em;
