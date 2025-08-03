@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const connectDB = require('./config/DatabaseConnection');
 require('dotenv').config();
 
 // Get Routes
@@ -13,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 //Set up Database Connection
-
+connectDB();
 
 //Use Routes
 app.use('/api/ai', aiRoutes);
