@@ -1,23 +1,24 @@
 import './styles/Summarybar.css';
 import SummaryItem from './SummaryItem';
 
-// fallback part names
 const defaultParts = {
-  "CPU": "AMD Ryzen 5 7600X",
-  "Motherboard": "MSI B650M PRO-VDH WIFI",
-  "Memory": "Corsair Vengeance 16GB (2x8GB) DDR5-6000",
-  "Storage": "Crucial P5 Plus 1TB NVMe SSD",
-  "Graphics Card": "NVIDIA GeForce RTX 4070 12GB",
-  "Power Supply": "Corsair RM750e 750W 80+ Gold",
-  "CPU Cooler": "NZXT H5 Flow ATX Mid Tower",
-  "Case Fans": "N/A"
+  "CPU": "",
+  "Motherboard": "",
+  "Memory": "",
+  "Storage": "",
+  "Graphics Card": "",
+  "Power Supply": "",
+  "CPU Cooler": "",
+  "Case Fans": ""
 };
 
 function SummaryBar({ selectedParts = [], currentRightTab}) {
-  // Build map safely
   const selectedMap = new Map(
-    Array.isArray(selectedParts) ? selectedParts.map(({ category, part }) => [category, part.name]) : []
-  );
+  Object.entries(selectedParts)
+    .filter(([_, data]) => data !== null)
+    .map(([category, data]) => [category, data.part.name])
+);
+console.log(selectedMap)
   return (
     <div style={{ display: currentRightTab === 'Summary' ? 'block' : 'none' }} className="summarybar-container" >
       <span className="summary-title">Parts Summary</span>
@@ -30,7 +31,6 @@ function SummaryBar({ selectedParts = [], currentRightTab}) {
           />
         ))}
       </div>
-      
     </div>
   );
 }
