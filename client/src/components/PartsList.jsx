@@ -1,4 +1,3 @@
-import Part from './Part';
 import './styles/PartsList.css';
 import defaultParts from '../data/defaultParts';
 function PartsList({currentTab,onAddPart}) {

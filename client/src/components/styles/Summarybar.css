@@ -1,8 +1,8 @@
  .summarybar-container {
-  width: 300px;
   padding: 20px;
   display: flex;
   flex-direction: column;
+  overflow-y:scroll;
 } 
 
 .summary-title {
@@ -11,6 +11,7 @@
   font-weight: bold;
   padding-bottom: 20px;
   align-self: center;
+  
 }
 
 .summarybar-container h2{
@@ -48,5 +49,6 @@
   background-color: #111418;
   border-left: 1px solid #2c2f36;
   min-width: 0;
+  
 }
 

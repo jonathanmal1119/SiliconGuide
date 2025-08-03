@@ -80,3 +80,10 @@
 .tree-item.selected .tree-leaf.last-branch::before {
   color: #fff;
 }
+.summary-sub-details {
+    color: #888;
+    font-size: 13px;
+    padding-left: 25px; /* aligns under part name */
+    margin-top: 2px;
+    font-family: monospace;
+}
