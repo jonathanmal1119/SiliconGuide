@@ -14,7 +14,7 @@ function SummaryItem(meta_data) {
                 {category_name}
             </div>
             <div className="summary-leaf last-branch">
-                {part_name}
+                {part_name || "N/A"}
             </div>
             {(price > 0 || watts > 0) && (
                 <div className="summary-sub-details">

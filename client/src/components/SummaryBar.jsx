@@ -7,6 +7,7 @@ const defaultParts = {
   "Memory": "",
   "Storage": "",
   "Graphics Card": "",
+  "Case": "",
   "Power Supply": "",
   "CPU Cooler": "",
   "Case Fans": ""
@@ -50,7 +51,7 @@ function SummaryBar({ selectedParts = [], currentRightTab}) {
       <div className="summary-total-section">
         <div className="summary-text">Total Price: ${totalPrice.toFixed(2)}</div>
         <div className="summary-text">Total Watts: {totalWatts}W</div>
-        <div className="summary-text">Total w/ Tax: ${totalWithTax.toFixed(2)}</div>
+        <div className="summary-text">Total w/ Tax({(taxRate * 100).toFixed(0)}%): ${totalWithTax.toFixed(2)}</div>
       </div>
     </div>
   </div>
