@@ -7,6 +7,9 @@
 # useful for handling different item types with a single interface
 from itemadapter import ItemAdapter
 import re
+from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
 
 # class PcPartScraperPipeline:
@@ -56,4 +59,25 @@ class PcBuilderCPUPipeline:
                 adapter[data] = 'N/A'
             else:
                 adapter[data] = float(clean_data.group())
+        return item
+
+
+class MongoPipeline:
+    def __init__(self):
+        # Load environment variables
+        load_dotenv()
+        self.mongo_uri = os.getenv("MONGO_URI")
+
+        # Connect to MongoDB
+        self.client = MongoClient(self.mongo_uri)
+
+        # Pick database and collection
+        self.db = self.client["silicon_guide"]
+        self.collection = self.db["parts"]
+
+    def close_spider(self, spider):
+        self.client.close()
+
+    def process_item(self, item, spider):
+        self.collection.insert_one(item)
         return item
